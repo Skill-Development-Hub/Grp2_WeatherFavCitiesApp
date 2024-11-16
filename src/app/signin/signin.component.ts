@@ -1,29 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrl: './signin.component.css'
+  styleUrls: ['./signin.component.css'],
 })
 export class SigninComponent {
-  signInForm!: FormGroup;
+  signinForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void{
-    this.signInForm = this.fb.group({
-      username: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+  constructor(private fb: FormBuilder) {
+    this.signinForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
     });
   }
-  
+
   onSubmit(): void {
-    if(this.signInForm.valid) {
-      const {username, password } = this.signInForm.value;
-      console.log('Sign-In Data: ', {username});
+    if (this.signinForm.valid) {
+      const { email, password } = this.signinForm.value;
+      console.log('Sign In Successful!', { email, password });
+      // Handle sign-in logic here
     } else {
-      console.log("Validation Failed")
+      console.error('Form is invalid');
     }
   }
 }

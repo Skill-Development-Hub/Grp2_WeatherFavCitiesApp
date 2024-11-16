@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,19 +13,26 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatFormField } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar'; // Make sure this is imported
 
+// Add your components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SignupComponent } from './signup/signup.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component'; // Import HomeComponent
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
+    NavbarComponent,
+    FooterComponent,
+    HomeComponent,  // Register HomeComponent here
   ],
   imports: [
     BrowserModule,
@@ -41,11 +48,12 @@ import { SignupComponent } from './signup/signup.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCheckboxModule,
-    MatFormField
+    MatFormFieldModule,
+    MatToolbarModule,  // Ensure MatToolbarModule is here
   ],
   providers: [
-    provideAnimationsAsync(),
-    provideHttpClient()
+    provideHttpClient(),
+    provideAnimations() // Corrected here
   ],
   bootstrap: [AppComponent]
 })

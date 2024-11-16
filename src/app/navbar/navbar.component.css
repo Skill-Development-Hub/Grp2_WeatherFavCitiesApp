@@ -1,0 +1,21 @@
+.navbar {
+    width: 100%;
+  }
+  
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #2193b0; /* Add background color */
+    color: white; /* Adjust text color for contrast if necessary */
+  }
+  
+  .spacer {
+    flex: 1 1 auto; /* Pushes buttons to the right */
+  }
+  
+  button {
+    font-size: 16px;
+  }
+  

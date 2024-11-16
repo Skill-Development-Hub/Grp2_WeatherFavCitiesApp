@@ -1,0 +1,108 @@
+/* Container styling */
+.signup-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+  }
+  
+  /* Background image with blur effect */
+  .background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px); /* Apply blur effect */
+    z-index: -1; /* Keeps the image behind the form content */
+  }
+  
+  /* Card styling */
+  mat-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for better contrast */
+    text-align: center;
+  }
+  
+  /* Title styling */
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  /* Form field styling */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Input field styling */
+  mat-input-element {
+    font-size: 16px;
+  }
+  
+/* Button styling */
+button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: #2193b0; /* Solid color for the button */
+    color: #fff;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Disabled button styling */
+  button:disabled {
+    background-color: #b0d8e6; /* Lighten color for disabled state */
+    opacity: 0.6; /* Slightly transparent when disabled */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #176f87; /* Darken color on hover */
+  }
+  
+  /* Active button styling */
+  button:not(:disabled) {
+    opacity: 1; /* Ensure the button is fully opaque when not disabled */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    mat-card {
+      padding: 16px;
+      border-radius: 8px;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  .signin-redirect {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  .signin-redirect a {
+    color: #2193b0;
+    text-decoration: none;
+  }
+  
+  .signin-redirect a:hover {
+    text-decoration: underline;
+  }

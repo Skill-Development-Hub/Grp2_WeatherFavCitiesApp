@@ -1,0 +1,22 @@
+/* Apply flexbox to body to ensure footer stays at the bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensures the page takes up at least the full height of the viewport */
+  }
+  
+  /* Main content should take available space */
+  main {
+    flex-grow: 1;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2193b0;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
