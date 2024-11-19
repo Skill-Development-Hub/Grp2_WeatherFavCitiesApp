@@ -94,13 +94,14 @@ app-footer {
     position: relative;
     width: 100%;
     margin-top: auto; }
+
 .favourites-section {
     margin-top: 40px;
   }
-  
-  .add-city-form {
+
+.add-city-form {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
   }
@@ -116,9 +117,39 @@ app-footer {
     flex-wrap: wrap;
   }
   
-  button.mat-icon-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  .feature-card {
+    width: 250px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative;
   }
   
+  .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  mat-card-title {
+    font-size: 1.5rem;
+    color: #2193b0;
+  }
+  
+  mat-card-content p {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  button.mat-icon-button {
+    margin: 0;
+    padding: 0;
+  }
+
+  .add-city-form button {
+    margin-top: -20px;
+}
+

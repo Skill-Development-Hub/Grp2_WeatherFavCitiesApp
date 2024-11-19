@@ -15,7 +15,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar'; // Make sure this is imported
-
+import { HttpClientModule } from '@angular/common/http'; // Correct import
 // Add your components
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
