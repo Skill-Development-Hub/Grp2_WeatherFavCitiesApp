@@ -20,7 +20,7 @@ export class SigninComponent {
     if (this.signinForm.valid) {
       const { email, password } = this.signinForm.value;
       console.log('Sign In Successful!', { email, password });
-      // Handle sign-in logic here
+      
     } else {
       console.error('Form is invalid');
     }

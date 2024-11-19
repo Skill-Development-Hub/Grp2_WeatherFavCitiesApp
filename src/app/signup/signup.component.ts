@@ -7,7 +7,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  signupForm!: FormGroup;  // Definite assignment assertion
+  signupForm!: FormGroup;  
 
   constructor(private fb: FormBuilder) {}
 
