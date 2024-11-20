@@ -1,43 +1,46 @@
 <div class="signin-container" fxLayout="column" fxLayoutAlign="center center">
-    <!-- Background image -->
-    <img src="/background.jpg" alt="Background Image" class="background-img" />
+  <!-- Background Image -->
+  <img src="/background.jpg" alt="Background Image" class="background-img" />
   
-    <!-- Sign-in Card -->
-    <mat-card>
-      <mat-card-title>Weather API Sign In</mat-card-title>
-      <mat-card-content>
-        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
-          <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" formControlName="email" />
-            <mat-error *ngIf="signinForm.get('email')?.hasError('required')">
-              Email is required
-            </mat-error>
-            <mat-error *ngIf="signinForm.get('email')?.hasError('email')">
-              Enter a valid email
-            </mat-error>
-          </mat-form-field>
-  
-          <mat-form-field class="full-width" appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" formControlName="password" />
-            <mat-error *ngIf="signinForm.get('password')?.hasError('required')">
-              Password is required
-            </mat-error>
-          </mat-form-field>
-  
-          <div class="action-buttons">
-            <button mat-raised-button color="primary" type="submit" [disabled]="signinForm.invalid">
-              Sign In
-            </button>
-          </div>
-        </form>
-      </mat-card-content>
-      
-      <!-- Signup Redirect Link -->
-      <div class="signup-redirect">
-        <p>Don't have an account? <a routerLink="/signup">Sign up now</a></p>
-      </div>
-    </mat-card>
-  </div>
-  
+  <!-- Sign-In Card -->
+  <mat-card>
+    <mat-card-title>Weather API Sign In</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Email Field -->
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email" />
+          <mat-error *ngIf="signinForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="signinForm.get('email')?.hasError('email')">
+            Enter a valid email
+          </mat-error>
+        </mat-form-field>
+        
+        <!-- Password Field -->
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+          <mat-error *ngIf="signinForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button mat-raised-button color="primary" type="submit" [disabled]="signinForm.invalid">
+            Sign In
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+    
+    <!-- Signup Redirect Link -->
+    <div class="signup-redirect">
+      <p>Don't have an account? <a routerLink="/signup">Sign up now</a></p>
+    </div>
+  </mat-card>
+</div>
