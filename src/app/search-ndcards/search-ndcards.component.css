@@ -54,6 +54,8 @@
 mat-card-title {
   font-size: 1.5rem;
   color: #2193b0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 mat-card-content p {
