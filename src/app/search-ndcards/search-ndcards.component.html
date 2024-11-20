@@ -18,9 +18,7 @@
           <mat-card *ngFor="let city of favouriteCities.controls; let i = index" class="feature-card">
             <div class="card-header">
               <mat-card-title>{{ city.value }}</mat-card-title>
-              <button mat-icon-button color="warn" (click)="removeCity(i)">
-                <mat-icon>delete</mat-icon>
-              </button>
+              
             </div>
             <mat-card-content>
               <!-- Weather data for each favourite city (if available) -->
@@ -34,6 +32,9 @@
               <div *ngIf="!favouriteCitiesWeather[i]">
                 <p>Loading weather data...</p>
               </div>
+              <button class="delete" mat-icon-button color="warn" (click)="removeCity(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
             </mat-card-content>
           </mat-card>
         </div>

@@ -13,7 +13,8 @@
     flex-direction: column;
     min-height: 100vh;
     position: relative;
-    overflow-x: hidden; }
+    /* overflow-x: hidden;  */
+  }
 
 .home-container {
     display: flex;
@@ -25,6 +26,8 @@
     z-index: 1;
     position: relative;
     width: 100%;
+    margin-top: -100px;
+    margin-bottom: -100px;
 }
 
 .hero-section {
@@ -85,71 +88,3 @@
     font-size: 1rem;
     color: #444;
 }
-
-app-footer {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    position: relative;
-    width: 100%;
-    margin-top: auto; }
-
-.favourites-section {
-    margin-top: 40px;
-  }
-
-.add-city-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .city-input {
-    flex: 1;
-  }
-  
-  .city-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .feature-card {
-    width: 250px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-  .card-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  mat-card-title {
-    font-size: 1.5rem;
-    color: #2193b0;
-  }
-  
-  mat-card-content p {
-    font-size: 1rem;
-    color: #444;
-  }
-  
-  button.mat-icon-button {
-    margin: 0;
-    padding: 0;
-  }
-
-  .add-city-form button {
-    margin-top: -20px;
-}
-
