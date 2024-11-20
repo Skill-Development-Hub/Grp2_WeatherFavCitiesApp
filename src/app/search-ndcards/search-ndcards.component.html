@@ -1,41 +1,54 @@
-    <!-- Favorite Cities Section -->
-    <div class="favourites-section">
-        <!-- Form for adding a new city -->
-        <form [formGroup]="favouritesForm" (ngSubmit)="onSubmit()">
-          <div class="add-city-form">
-            <mat-form-field appearance="fill" class="city-input">
-              <mat-label>Add a City</mat-label>
-              <input matInput formControlName="newCity" />
-            </mat-form-field>
-            <button mat-raised-button color="primary" (click)="addCity()" [disabled]="favouriteCities.length >= 5">
-              Add City
-            </button>
-          </div>
-        </form>
-  
-        <!-- List of favourite cities -->
-        <div class="city-cards">
-          <mat-card *ngFor="let city of favouriteCities.controls; let i = index" class="feature-card">
-            <div class="card-header">
-              <mat-card-title>{{ city.value }}</mat-card-title>
-              
-            </div>
-            <mat-card-content>
-              <!-- Weather data for each favourite city (if available) -->
-              <div *ngIf="favouriteCitiesWeather[i]">
-                <p>Temperature: {{ favouriteCitiesWeather[i]?.current?.temp_c }}°C</p>
-                <p>Wind Speed: {{ favouriteCitiesWeather[i]?.current?.wind_kph }} KPH</p>
-                <p>Condition: {{ favouriteCitiesWeather[i]?.current?.condition?.text }}</p>
-                <p>Country: {{ favouriteCitiesWeather[i]?.location?.country }}</p>
-                <p>Local Time: {{ favouriteCitiesWeather[i]?.location?.localtime }}</p>
-              </div>
-              <div *ngIf="!favouriteCitiesWeather[i]">
-                <p>Loading weather data...</p>
-              </div>
-              <button class="delete" mat-icon-button color="warn" (click)="removeCity(i)">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </mat-card-content>
-          </mat-card>
-        </div>
+<!-- Favorite Cities Section -->
+<div class="favourites-section">
+  <!-- Form for adding a new city -->
+  <form [formGroup]="favouritesForm" (ngSubmit)="onSubmit()">
+    <div class="add-city-form">
+      <mat-form-field appearance="fill" class="city-input">
+        <mat-label>Add a City</mat-label>
+        <input matInput formControlName="newCity" />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="addCity()"
+        [disabled]="favouriteCities.length >= 5"
+      >
+        Add City
+      </button>
+    </div>
+  </form>
+
+  <!-- List of favorite cities -->
+  <div class="city-cards">
+    <mat-card
+      *ngFor="let city of favouriteCities.controls; let i = index"
+      class="feature-card"
+    >
+      <div class="card-header">
+        <mat-card-title>{{ city.value }}</mat-card-title>
       </div>
+      <mat-card-content>
+        <!-- Weather data for each favorite city -->
+        <div *ngIf="favouriteCitiesWeather[i]">
+          <p>Temperature: {{ favouriteCitiesWeather[i]?.current?.temp_c }}°C</p>
+          <p>Wind Speed: {{ favouriteCitiesWeather[i]?.current?.wind_kph }} KPH</p>
+          <p>Condition: {{ favouriteCitiesWeather[i]?.current?.condition?.text }}</p>
+          <p>Country: {{ favouriteCitiesWeather[i]?.location?.country }}</p>
+          <p>Local Time: {{ favouriteCitiesWeather[i]?.location?.localtime }}</p>
+        </div>
+        <div *ngIf="!favouriteCitiesWeather[i]">
+          <p>Loading weather data...</p>
+        </div>
+        <!-- Delete Button -->
+        <button
+          class="delete"
+          mat-icon-button
+          color="warn"
+          (click)="removeCity(i)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

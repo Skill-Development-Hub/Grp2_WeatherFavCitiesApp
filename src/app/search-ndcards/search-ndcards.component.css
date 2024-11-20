@@ -1,36 +1,39 @@
+/* Features Section */
 .features-section {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
-  flex-wrap: wrap;padding: 0 20px;
-  margin-bottom: 50px; }
+  padding: 0 20px;
+  margin-bottom: 50px;
+}
 
 .feature-card {
   width: 250px;
   padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
   position: relative;
 }
 
 .feature-card mat-card-title {
-    font-size: 1.5rem;
-    color: #2193b0;
+  font-size: 1.5rem;
+  color: #2193b0;
 }
 
+/* Favourites Section */
 .favourites-section {
-    margin-top: 40px;
-  }
+  margin-top: 40px;
+}
 
 .add-city-form {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
-  margin-top: -100px;
+  margin: -100px 0 20px;
 }
 
 .city-input {
@@ -38,11 +41,16 @@
   width: 350px;
 }
 
+.add-city-form button {
+  margin-top: -20px;
+}
+
+/* City Cards */
 .city-cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card-header {
@@ -63,25 +71,18 @@ mat-card-content p {
   color: #444;
 }
 
+/* Button Styles */
 button.mat-icon-button {
   margin: 0;
   padding: 0;
-  font-size: 100px;
-}
-
-.add-city-form button {
-  margin-top: -20px;
+  font-size: 1.5rem;
 }
 
 .delete {
- color: red;
- margin-left: 10px;
-}
-
-.delete {
+  color: red;
   margin-left: 10px;
 }
 
 .delete-icon {
-  font-size: 50px; 
+  font-size: 1.25rem;
 }
