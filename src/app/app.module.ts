@@ -23,7 +23,9 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component'; // Import HomeComponent
+import { HomeComponent } from './home/home.component';
+import { SearchNDcardsComponent } from './search-ndcards/search-ndcards.component'; // Import HomeComponent
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { HomeComponent } from './home/home.component'; // Import HomeComponent
     SignupComponent,
     NavbarComponent,
     FooterComponent,
-    HomeComponent,  // Register HomeComponent here
+    HomeComponent,
+    SearchNDcardsComponent,  // Register HomeComponent here
   ],
   imports: [
     BrowserModule,
