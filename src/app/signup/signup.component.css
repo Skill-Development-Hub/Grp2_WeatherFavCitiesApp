@@ -90,3 +90,18 @@ button {
   .signin-redirect a:hover {
     text-decoration: underline;
   }
+
+  .signup-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .full-width {
+    width: 100%;
+  }
+  .action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  

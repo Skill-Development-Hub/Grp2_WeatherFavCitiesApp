@@ -14,9 +14,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatToolbarModule } from '@angular/material/toolbar'; // Make sure this is imported
-import { HttpClientModule } from '@angular/common/http'; // Correct import
-// Add your components
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
@@ -24,8 +25,7 @@ import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
-import { SearchNDcardsComponent } from './search-ndcards/search-ndcards.component'; // Import HomeComponent
-
+import { SearchNDcardsComponent } from './search-ndcards/search-ndcards.component';
 
 @NgModule({
   declarations: [
@@ -35,11 +35,11 @@ import { SearchNDcardsComponent } from './search-ndcards/search-ndcards.componen
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    SearchNDcardsComponent,  // Register HomeComponent here
+    SearchNDcardsComponent, // Register components here
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, // Required for Angular Material animations
     ReactiveFormsModule,
     AppRoutingModule,
     MatCardModule,
@@ -52,12 +52,13 @@ import { SearchNDcardsComponent } from './search-ndcards/search-ndcards.componen
     MatNativeDateModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatToolbarModule,  // Ensure MatToolbarModule is here
+    MatToolbarModule,
+    HttpClientModule, // Add HttpClientModule for API calls
   ],
   providers: [
-    provideHttpClient(),
-    provideAnimations() // Corrected here
+    provideHttpClient(), // Angular's functional HTTP client provider
+    provideAnimations(), // Angular animations provider
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

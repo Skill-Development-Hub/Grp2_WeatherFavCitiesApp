@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { WeatherService } from '../services/weather.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
